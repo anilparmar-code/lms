@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('leaves', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id')->index();
+            $table->unsignedBigInteger('leave_type_id')->index();
             $table->timestamp('start_date');
             $table->timestamp('end_date');
             $table->string('reason');

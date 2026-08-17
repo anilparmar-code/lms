@@ -2,9 +2,12 @@
 
 namespace App\Providers;
 
+use App\Events\LeaveStatusChanged;
+use App\Listeners\SendLeaveStatusChangedMail;
 use Carbon\CarbonImmutable;
 use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Validation\Rules\Password;
 

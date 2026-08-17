@@ -57,5 +57,8 @@ class DatabaseSeeder extends Seeder
         LeaveType::query()->firstOrCreate([
             'name' => 'Paid Leave',
         ]);
+
+        // Leaves
+        Leave::factory(10)->create();
     }
 }
